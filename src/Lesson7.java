@@ -59,7 +59,7 @@ public class Lesson7 {
         if (officeDay == "Working day") {
             System.out.println("You have to wear heels");
         }  else if (officeDay == "Casual Fridays") {
-            System.out.println("You have to wear heels");
+            System.out.println("You can wear flats");
         } else if (officeDay == "Holidays") {
             System.out.println("You can stay at home");
         } else if (officeDay == "Halloween") {
@@ -68,6 +68,45 @@ public class Lesson7 {
             System.out.println("Such day does not exist");
         }
 
+        // Implement the same office wear activity
+        // Using Switch operator
+        switch(officeDay) {
+            case "Working day":
+                System.out.println("You must wear high heels");
+                break;
+            case "Casual Fridays":
+                System.out.println("You can wear flats");
+                break;
+            case "Halloween":
+                System.out.println("You can come to work in a costume");
+                break;
+            case "Holidays":
+                System.out.println("You can stay at home");
+                break;
+            default:
+                System.out.println("No such day");
+        }
+
+
+        // Intervals of ages
+//        Calculate price for a ticket in museum
+        // 0 - 7 - Free
+        // 8 - 12 - 1eur
+        // 13 - 18 - 2eur
+        // 18 - 64 - 5 eur
+        // 65 - 120 - free
+        short age = 31;
+        if( (age >= 0 && age < 8) || (age >= 64 && age < 120) ) {
+            System.out.println("you can go for free");
+        } else if( age >= 8 && age < 12) {
+            System.out.println("Price is 1 euro");
+        } else if ( age >= 12 && age < 18 ) {
+            System.out.println("Price is 2 euro");
+        } else if ( age >= 18 && age < 64 ) {
+            System.out.println("Price is 5 euro");
+        } else {
+            System.out.println("Seems that your age is incorrect");
+        }
 
     }
 }
